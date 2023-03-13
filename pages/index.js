@@ -1,29 +1,25 @@
 import React from 'react';
-import { client } from '../lib/client';
+import { client } from '../lib/client'; // import Sanity client 
 import { Product, FooterBanner, HeroBanner } from '../components';
 
-const Home = ({ products, bannerData }) => (
+const Home = ({ products }) => (   //anything getServerSideProps returns, gets populated into this function  
   <div>
-    {/* <HeroBanner heroBanner={bannerData.length && bannerData[0]}  /> */}
-    {/* {console.log(bannerData)} */}
+    {/* {console.log(products)} */}
     <div className="products-heading">
     </div>
 
-    <div className="products-container">
-      {products?.map((product) => <Product key={product._id} product={product} />)}
+    <div className="products-container"> 
+      {products?.map((product) => <Product key={product._id} product={product} />)}  
     </div>
   </div>
 );
 
 export const getServerSideProps = async () => { //utilze this function when fetching from an API or CMS 
-  const query = '*[_type == "product"]'; //grab all products from product dashboard 
-  const products = await client.fetch(query);
-
-  const bannerQuery = '*[_type == "banner"]'; //fetch everything where type is equal to banner 
-  const bannerData = await client.fetch(bannerQuery);
+  const query = '*[_type == "product"]'; //Sanity query to grab all products from product dashboard 
+  const products = await client.fetch(query); // pass the query 
 
   return { 
-    props: { products, bannerData }
+    props: { products } // pass the products data
   }
 }
 
