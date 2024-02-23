@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import { urlFor } from '../lib/client';
 
-const Product = ({ product: { image, name, slug, price } }) => { //destructrue product data from Sanity and utilize anywhere within your components  
+const Product = ({ product: { image, name, slug, price } }) => {
   return (
     <div>
       <Link href={`/product/${slug.current}`}>

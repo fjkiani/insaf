@@ -6,8 +6,8 @@ const Footer = () => {
     <div className="footer-container">
       <p>EST 2022 <br/> Made in Brooklyn </p>
       <p className="icons">
-        {/* <AiFillInstagram />
-        <AiOutlineTwitter /> */}
+        <AiFillInstagram />
+        {/* <AiOutlineTwitter /> */}
       </p>
     </div>
   )

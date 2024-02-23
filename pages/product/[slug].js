@@ -43,8 +43,7 @@ const ProductDetails = ({ product, products }) => {
               <AiFillStar />
               <AiFillStar />
               <AiFillStar />
-              <AiFillStar />
-      
+              <AiOutlineStar />
             </div>
             <p>
               (20)
@@ -68,7 +67,7 @@ const ProductDetails = ({ product, products }) => {
         </div>
       </div>
 
-      {/* <div className="maylike-products-wrapper">
+      <div className="maylike-products-wrapper">
           <h2>You may also like</h2>
           <div className="marquee">
             <div className="maylike-products-container track">
@@ -77,7 +76,7 @@ const ProductDetails = ({ product, products }) => {
               ))}
             </div>
           </div>
-      </div> */}
+      </div>
     </div>
   )
 }
