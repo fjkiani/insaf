@@ -24,6 +24,8 @@ width: 100%;
 }
 .layout{
   padding: 10px;
+  text-align: center;
+
 }
 
 .navbar-container{
@@ -205,6 +207,7 @@ text-align: end;
 .products-heading h2{
   font-size: 40px;
   font-weight: 800;
+  margin-top: 20rem;
 }
 .products-heading p{
   font-size: 16px;
@@ -617,51 +620,49 @@ margin-top: 160px;
 .product-max-qty{
   margin-top: 10px;
 }
+@media screen and (max-width: 800px) {
+  .hero-banner-container {
+    padding: 5% 5%; /* Use percentage for responsive padding */
+    height: auto; /* Make height dynamic */
+    line-height: 1.3; /* Good for readability */
+  }
 
-@media screen and (max-width:800px) {
-  .hero-banner-container{
-    height: 560px;
+  .hero-banner-image {
+    width: 100%; /* Max out the width to be responsive */
+    height: auto; /* Keep the height auto to maintain aspect ratio */
+    top: 20rem;
+    right: 50%;
+    transform: translate(50%, -50%); /* Center the image */
   }
-  .hero-banner-image{
-    width: 77%;
-    height: 62%;
-    top: -2%;
-    right: -6%;
+
+  .footer-banner-container {
+    margin-top: 10%; /* Use percentage for responsive spacing */
+    height: auto; /* Make height dynamic */
   }
-  .footer-banner-container{
-    height: 560px;
-    margin-top: 80px;
+
+  .footer-banner-image {
+    width: 100%; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Center the image */
   }
-  .footer-banner-image{
-    width: 77%;
-    left: 30%;
-    top: 6%;
-    height: 56%
+
+  .banner-desc .left h3,
+  .banner-desc .right h3 {
+    font-size: 2.5rem; /* Use rem for scalability */
   }
-  .banner-desc .left h3{
-    font-weight: 900;
-    font-size: 50px;
-    margin-left: 5px;
+
+  .banner-desc .left p,
+  .banner-desc .right p,
+  .banner-desc .right .company-desc {
+    font-size: 1rem; /* Use rem for scalability */
   }
-  .banner-desc .left p{
-    margin:18px;
+
+  .banner-desc {
+    flex-direction: column; /* Stack the descriptions for smaller screens */
   }
-  .banner-desc .right h3{
-    font-size: 45px;
-  }
-  .banner-desc .right p{
-    font-size: 18px;
-  }
-  .banner-desc .right .company-desc{
-    font-size: 14px;
-  }
-  .banner-desc{
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  .hero-banner-container{
-    line-height: 1.3;
-  }
+
   .hero-banner-container h1{
     font-size: 30px;
   }
